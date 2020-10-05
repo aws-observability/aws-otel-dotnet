@@ -4,7 +4,7 @@ AWS X-Ray SDK Integration Test Runner is an integration testing suite for AWS X-
 
 ## Prerequisites
 1. Requires to have web/lambda sample application instrumented with X-Ray SDK
-2. Requires web application has all the testing paths that Test Runner supports
+2. Requires sample web application has all the testing paths that Test Runner supports
 3. Requires  [running AWS X-Ray Daemon](https://docs.aws.amazon.com/xray/latest/devguide/xray-daemon-local.html)
 
 ## Quick Start
@@ -15,7 +15,7 @@ Test Runner can be run with 2 types of application.
 2. LambdaApplication
 ```
 
-Currently Test Runner supports /aws-sdk-call, /outgoing-http-call, /annotations-metadata and /flask-sql-alchemy paths for python flask middleware. This means sample flask middleware should support this paths. Test Runner by default executes general tests for any language and for any middleware. General tests includes testing aws sdk call instrumentation, http client instrumentation and injection of annotations and metadata. In order to run general tests with any web applications like (springboot, django) make sure web application has /aws-sdk-call, /outgoing-http-call and /annotations-metadata path. Moreover, include only one call per path e.g. /aws-sdk-call path includes only one call to S3 (ListBuckets). Test Runner can also include framework specific integration tests.
+Currently Test Runner supports /aws-sdk-call, /outgoing-http-call, /annotations-metadata and /flask-sql-alchemy paths for python flask middleware. This means sample flask middleware should support this paths too. Test Runner by default executes general tests for any language and for any middleware. General tests includes testing aws sdk call instrumentation, http client instrumentation and injection of annotations and metadata. In order to run general tests with any web applications like (springboot, django) make sure web application has /aws-sdk-call, /outgoing-http-call and /annotations-metadata path. Moreover, include only one call per path e.g. /aws-sdk-call path includes only one call to S3 (ListBuckets). Test Runner can also include framework specific integration tests.
 
 **Test Runner with web app**
 
