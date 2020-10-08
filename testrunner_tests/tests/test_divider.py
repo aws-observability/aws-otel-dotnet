@@ -32,7 +32,7 @@ def run_tests(app_type, endpoint, sdk_language):
                 # append flask web app specific tests file path
                 file_paths.append(f'{testfile}/web_app/python/test_flask_app_suite.py::TestFlaskApp')
 
-                result = pytest.main(file_paths)
+            result = pytest.main(file_paths)
 
             del endpoint
             os.remove(pickle_file_name)
