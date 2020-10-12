@@ -1,3 +1,6 @@
+# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+# SPDX-License-Identifier: Apache-2.0
+
 AMAZON_TRACE_HEADER_ID = 'X-Amzn-Trace-Id'
 LAMBDA_AMAZON_TRACE_HEADER_ID_KEY = 'x-amzn-trace-id'
 ROOT = 'root'

@@ -1,3 +1,6 @@
+# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+# SPDX-License-Identifier: Apache-2.0
+
 import json
 
 from testrunner_tests.utils.utils import invoke_endpoint, get_segment_data_from_response

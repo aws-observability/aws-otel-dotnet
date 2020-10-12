@@ -1,3 +1,6 @@
+# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+# SPDX-License-Identifier: Apache-2.0
+
 import unittest
 from testrunner_tests.utils import utils
 from testrunner_tests.tests import test_divider
