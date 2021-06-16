@@ -12,12 +12,6 @@ jobs:
       - name: Checkout AWS OTel Dotnet Repo
         uses: actions/checkout@v2
 
-      - name: Checkout Otel Dotnet Contrib Repo
-        uses: actions/checkout@v2
-        with:
-          repository: open-telemetry/opentelemetry-dotnet-contrib
-          path: integration-test-app/opentelemetry-dotnet-contrib
-
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
