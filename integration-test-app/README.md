@@ -14,9 +14,9 @@ The application exposes the following routes:
 
 ## Running the integration testing application locally
 
-This application **lacks** dependencies for AWS X-Ray trace id gegerator, propagator and AWS client instrumentation and is intended for github workflow. If you want to run it locally, follow steps below:
+This application **lacks** dependencies for AWS X-Ray trace id generator, propagator and AWS client instrumentation and is intended for github workflow. If you want to run it locally, follow steps below:
 
-1. Checkout `aws-otel-dotnet` repo and navigate to the `integration-test-app/` folder。
+1. Checkout `aws-otel-dotnet` repo and navigate to the `integration-test-app/` folder.
 
 2. In the same folder, replace the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` values with your AWS credentials in `docker-compose.yml` file and run:
 
