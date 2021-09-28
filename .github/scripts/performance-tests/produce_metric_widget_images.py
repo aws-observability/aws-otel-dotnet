@@ -381,7 +381,6 @@ if __name__ == "__main__":
                 key=os.path.getmtime,
             )
             for old_snapshots_dir in oldest_snapshot_dirs:
-
                 shutil.rmtree(old_snapshots_dir, ignore_errors=True)
 
     logger.info("Done creating metric widget images.")
