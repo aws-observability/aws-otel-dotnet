@@ -22,7 +22,7 @@ env:
   AWS_DEFAULT_REGION: us-east-1
   DEFAULT_TEST_DURATION_MINUTES: 300
   HOSTMETRICS_INTERVAL_SECS: 600
-  CPU_LOAD_THRESHOLD: 67
+  CPU_LOAD_THRESHOLD: 70
   TOTAL_MEMORY_THRESHOLD: 17179869184 # 16 GiB
   MAX_BENCHMARKS_TO_KEEP: 100
   # TODO: We might be able to adapt the "Soak Tests" to be "Overhead Tests".
@@ -216,7 +216,7 @@ jobs:
         with:
           filename: .github/auto-issue-templates/failure-during-soak_tests.md
       - name: Publish Issue if failed AFTER Performance Tests
-        uses: NathanielRN/create-an-issue@v2.5.1-alpha2
+        uses: JasonEtco/create-an-issue@v2
         if: ${{ github.event_name == 'schedule' &&
           steps.check-failure-after-performance-tests.outcome == 'failure' }}
         env:
