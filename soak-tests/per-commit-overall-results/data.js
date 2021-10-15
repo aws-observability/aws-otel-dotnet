@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1633982747582,
+  "lastUpdate": 1634328354546,
   "repoUrl": "https://github.com/aws-observability/aws-otel-dotnet",
   "entries": {
     "Soak Test Results - sample-app-microsoft_dotnet-manual": [
@@ -159,6 +159,38 @@ window.BENCHMARK_DATA = {
           {
             "name": "Soak Test Average Virtual Memory Used",
             "value": 14047.300242456897,
+            "unit": "Megabytes"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "(Eliseo) Nathaniel Ruiz Nowell",
+            "username": "NathanielRN",
+            "email": "enowell@amazon.com"
+          },
+          "committer": {
+            "name": "GitHub",
+            "username": "web-flow",
+            "email": "noreply@github.com"
+          },
+          "id": "b9ca772413db4934dd7ae442811121378daae05a",
+          "message": "Detect docker-compose start up failures and fail soak tests early (#17)",
+          "timestamp": "2021-10-15T04:20:09Z",
+          "url": "https://github.com/aws-observability/aws-otel-dotnet/commit/b9ca772413db4934dd7ae442811121378daae05a"
+        },
+        "date": 1634328354097,
+        "tool": "custombenchmark",
+        "benches": [
+          {
+            "name": "Soak Test Average CPU Load",
+            "value": 62.60148809523809,
+            "unit": "Percent"
+          },
+          {
+            "name": "Soak Test Average Virtual Memory Used",
+            "value": 14206.190328663793,
             "unit": "Megabytes"
           }
         ]
