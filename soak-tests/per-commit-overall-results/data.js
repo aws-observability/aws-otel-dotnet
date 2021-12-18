@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1635970273843,
+  "lastUpdate": 1639858115427,
   "repoUrl": "https://github.com/aws-observability/aws-otel-dotnet",
   "entries": {
     "Soak Test Results - sample-app-microsoft_dotnet-manual": [
@@ -223,6 +223,38 @@ window.BENCHMARK_DATA = {
           {
             "name": "Soak Test Average Virtual Memory Used",
             "value": 14045.061979166667,
+            "unit": "Megabytes"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "(Eliseo) Nathaniel Ruiz Nowell",
+            "username": "NathanielRN",
+            "email": "enowell@amazon.com"
+          },
+          "committer": {
+            "name": "GitHub",
+            "username": "web-flow",
+            "email": "noreply@github.com"
+          },
+          "id": "b0d92dc01d4daea73ab0f5e1ba95b94694b777f9",
+          "message": "Bump CPU Threshold to 75 (#23)\n\n* Although the CPU usage usually stays below 70, it gets very close everytime\r\n* This gives us more margin to detect actual spikes",
+          "timestamp": "2021-12-17T22:33:49Z",
+          "url": "https://github.com/aws-observability/aws-otel-dotnet/commit/b0d92dc01d4daea73ab0f5e1ba95b94694b777f9"
+        },
+        "date": 1639858115005,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "Soak Test Average CPU Load",
+            "value": 62.139345238095245,
+            "unit": "Percent"
+          },
+          {
+            "name": "Soak Test Average Virtual Memory Used",
+            "value": 14182.467672413793,
             "unit": "Megabytes"
           }
         ]
