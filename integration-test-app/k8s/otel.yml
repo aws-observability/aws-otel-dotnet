@@ -1,0 +1,97 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: otel-config
+data:
+  collector-config-local.yml: |+
+    receivers:
+      otlp:
+        protocols:
+          grpc:
+            # endpoint: 0.0.0.0:4317
+            # endpoint: otel:4317
+
+    exporters:
+      logging:
+        loglevel: info
+      awsxray:
+        region: us-west-2
+      awsemf:
+        region: us-west-2
+
+    service:
+      pipelines:
+        traces:
+          receivers:
+            - otlp
+          exporters:
+            - logging
+            - awsxray
+        metrics:
+          receivers:
+            - otlp
+          exporters:
+            - logging
+            - awsemf
+
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: otel
+  labels:
+    app: otel
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: otel
+  template:
+    metadata:
+      labels:
+        app: otel
+    spec:
+      containers:
+        - name: otel
+          image: amazon/aws-otel-collector:latest
+          args:
+          - --config
+          - /config/collector-config-local.yml
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 4317
+              protocol: TCP
+          env:
+            - name: AWS_ACCESS_KEY_ID
+              value: **************** # Update your Access Key here
+            - name: AWS_SECRET_ACCESS_KEY
+              value: **************** # Update your Secret Key here
+            - name: AWS_REGION
+              value: us-west-2
+          volumeMounts:
+          - name: otel-config
+            mountPath: /config/collector-config-local.yml
+            subPath: collector-config-local.yml
+      volumes:
+      - name: otel-config
+        configMap:
+          name: otel-config
+            
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: otel
+  labels:
+    app: otel
+spec:
+  selector:
+    app: otel
+  ports:
+    - name: otel
+      port: 4317
+      protocol: TCP
+      targetPort: 4317
+

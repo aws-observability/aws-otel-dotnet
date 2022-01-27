@@ -1,0 +1,57 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: dotnetapp
+  labels:
+    app: dotnetapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dotnetapp
+  template:
+    metadata:
+      labels:
+        app: dotnetapp
+    spec:
+      containers:
+        - name: dotnetapp
+          image: dharmendrakariya/aspnetapp:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          env:
+            - name: AWS_ACCESS_KEY_ID
+              value: **************** # Update your Access Key here
+            - name: AWS_SECRET_ACCESS_KEY
+              value: **************** # Update your Secret Key here
+            - name: AWS_REGION
+              value: us-west-2
+            - name: INSTANCE_ID
+            - name: LISTEN_ADDRESS
+              value: 0.0.0.0:8080
+            - name: OTEL_RESOURCE_ATTRIBUTES
+              value: service.name=aws-otel-integ-test
+            - name: OTEL_EXPORTER_OTLP_ENDPOINT
+              value: http://otel:4317
+            - name: ASPNETCORE_URLS
+              value: http://+:8080
+            
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: dotnetapp
+  labels:
+    app: dotnetapp
+spec:
+  selector:
+    app: dotnetapp
+  ports:
+    - name: dotnetapp
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
+
