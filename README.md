@@ -6,6 +6,8 @@ AWS Distro for OpenTelemetry .NET SDK (ADOT .NET SDK) is a distribution of [Open
 
 To send traces to AWS X-Ray, you can use the [AWS Distro for OpenTelemetry (ADOT) Collector](https://github.com/aws-observability/aws-otel-collector). OpenTelemetry .NET SDK exports traces from the application to the ADOT Collector. The ADOT Collector translates OTLE traces to X-Ray compatiable traces and further exports them to X-Ray backend. For more information, read [AWS X-Ray Tracing Exporter for OpenTelemetry Collector](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/exporter/awsxrayexporter).
 
+ADOT is also now generally available for .NET metrics. 
+
 ## Getting Started 
 
 Check out the getting started [documentation](https://aws-otel.github.io/docs/introduction)
