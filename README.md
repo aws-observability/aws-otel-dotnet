@@ -1,10 +1,10 @@
-# AWS Distro for OpenTelemetry .NET SDK
+# AWS Distro for OpenTelemetry .NET Language
 
 ## Introduction
 
-AWS Distro for OpenTelemetry .NET SDK (ADOT .NET SDK) is a distribution of [OpenTelemetry .NET](https://github.com/open-telemetry/opentelemetry-dotnet) SDK, configured to trace applications in a format compatible with the AWS X-Ray service. This way, all the features of the OpenTelemetry project are available, but its components are configured to create traces which can be viewed in the AWS X-Ray console and are configured to allow propagation of those contexts across multiple downstream AWS services.
+This repo hosts documentation and sample apps for the ADOT .NET library which provides the AWS service integrations for traces and metrics for the [OpenTelemetry .NET](https://github.com/open-telemetry/opentelemetry-dotnet) library. The library can be configured to support trace applications with the AWS X-Ray service. This way, all the features of the OpenTelemetry project are available, but its components are configured to create traces which can be viewed in the AWS X-Ray console and are configured to allow propagation of those contexts across multiple downstream AWS services.
 
-To send traces to AWS X-Ray, you can use the [AWS Distro for OpenTelemetry (ADOT) Collector](https://github.com/aws-observability/aws-otel-collector). OpenTelemetry .NET SDK exports traces from the application to the ADOT Collector. The ADOT Collector translates OTLE traces to X-Ray compatiable traces and further exports them to X-Ray backend. For more information, read [AWS X-Ray Tracing Exporter for OpenTelemetry Collector](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/exporter/awsxrayexporter).
+To send traces to AWS X-Ray, you can use the [AWS Distro for OpenTelemetry (ADOT) Collector](https://github.com/aws-observability/aws-otel-collector). OpenTelemetry .NET SDK exports traces from the application to the ADOT Collector. The ADOT Collector translates OTLP traces to X-Ray compatiable traces and further exports them to X-Ray backend. For more information, read [AWS X-Ray Tracing Exporter for OpenTelemetry Collector](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/exporter/awsxrayexporter).
 
 ## Getting Started 
 
