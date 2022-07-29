@@ -24,6 +24,10 @@ See the [example sample application](https://github.com/aws-observability/aws-ot
 * [AWS Distro for OpenTelemetry](https://aws-otel.github.io/)
 * [AWS Distro for OpenTelemetry Collector](https://github.com/aws-observability/aws-otel-collector)
 
+## Support 
+
+Please note that as per policy, we're providing support via GitHub on a best effort basis. However, if you have AWS Enterprise Support you can create a ticket and we will provide direct support within the respective SLAs. 
+
 ## License
 
 This project is licensed under the Apache-2.0 License.
