@@ -18,7 +18,9 @@ This application **lacks** dependencies for AWS X-Ray trace id generator, propag
 
 1. Checkout `aws-otel-dotnet` repo and navigate to the `integration-test-app/` folder.
 
-2. In the same folder, replace the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` values with your AWS credentials in `docker-compose.yml` file and run:
+2. Ensure that you have AWS credentials [configured](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html).
+   
+`note`: Windows users will need to change the the volume mount source path for AWS credentials from `~/.aws` to `%USERPROFILE%\.aws`
 
 ```shell
 docker build -t aspnetapp .
