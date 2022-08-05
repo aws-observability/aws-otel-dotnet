@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1659211557374,
+  "lastUpdate": 1659729975309,
   "repoUrl": "https://github.com/aws-observability/aws-otel-dotnet",
   "entries": {
     "Soak Test Results - sample-app-microsoft_dotnet-manual": [
@@ -383,6 +383,38 @@ window.BENCHMARK_DATA = {
           {
             "name": "Soak Test Average Virtual Memory Used",
             "value": 6990.052734375,
+            "unit": "Megabytes"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "bryan-aguilar",
+            "username": "bryan-aguilar",
+            "email": "46550959+bryan-aguilar@users.noreply.github.com"
+          },
+          "committer": {
+            "name": "GitHub",
+            "username": "web-flow",
+            "email": "noreply@github.com"
+          },
+          "id": "aeeb983f4093b9931a2ae999991336fed4b996a9",
+          "message": "Change from env var to volume mount for AWS creds (#35)\n\n* Change to volume mount instead of env var\r\n\r\n* Update readme for local execution",
+          "timestamp": "2022-08-04T17:02:19Z",
+          "url": "https://github.com/aws-observability/aws-otel-dotnet/commit/aeeb983f4093b9931a2ae999991336fed4b996a9"
+        },
+        "date": 1659729974629,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "Soak Test Average CPU Load",
+            "value": 55.847557471264366,
+            "unit": "Percent"
+          },
+          {
+            "name": "Soak Test Average Virtual Memory Used",
+            "value": 7784.6356411637935,
             "unit": "Megabytes"
           }
         ]
