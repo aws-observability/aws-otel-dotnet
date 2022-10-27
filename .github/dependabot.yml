@@ -1,0 +1,14 @@
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: sunday
+
+  # Maintain dependencies for npm
+  - package-ecosystem: "nuget"
+    directory: "/integration-test-app/integration-test-app"
+    schedule:
+      interval: "weekly"
+      day: sunday
