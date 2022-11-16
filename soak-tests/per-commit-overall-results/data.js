@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1664482012612,
+  "lastUpdate": 1668629200497,
   "repoUrl": "https://github.com/aws-observability/aws-otel-dotnet",
   "entries": {
     "Soak Test Results - sample-app-microsoft_dotnet-manual": [
@@ -447,6 +447,38 @@ window.BENCHMARK_DATA = {
           {
             "name": "Soak Test Average Virtual Memory Used",
             "value": 7354.05078125,
+            "unit": "Megabytes"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "Vasi Vasireddy",
+            "username": "vasireddy99",
+            "email": "41936996+vasireddy99@users.noreply.github.com"
+          },
+          "committer": {
+            "name": "GitHub",
+            "username": "web-flow",
+            "email": "noreply@github.com"
+          },
+          "id": "0e8f225d087c356fa340d31daddf2416eef4c5d8",
+          "message": "Create Stale bot for the repo (#36)",
+          "timestamp": "2022-11-16T16:58:46Z",
+          "url": "https://github.com/aws-observability/aws-otel-dotnet/commit/0e8f225d087c356fa340d31daddf2416eef4c5d8"
+        },
+        "date": 1668629199543,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "Soak Test Average CPU Load",
+            "value": 60.843005952380956,
+            "unit": "Percent"
+          },
+          {
+            "name": "Soak Test Average Virtual Memory Used",
+            "value": 8432.704799107143,
             "unit": "Megabytes"
           }
         ]
