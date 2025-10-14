@@ -19,6 +19,10 @@ on:
 
 jobs:
   stale-close:
+    permissions:
+      contents: read
+      issues: write
+      pull-requests: write
     runs-on: ubuntu-latest
     steps:
       - name: Mark the issues/pr
