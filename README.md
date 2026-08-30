@@ -16,7 +16,7 @@ Check out the getting started [documentation](https://aws-otel.github.io/docs/in
 
 The sample app has included AspNetCore instrumentation, Http instrumentation and OTLP exporter. In addition, it instruments AWS X-Ray id generator in order for the AWS X-Ray back-end to process the traces. It also integrates AWS X-Ray propagator and AWS client instrumentation to trace AWS sdk calls.
 
-See the [example sample application](https://github.com/aws-observability/aws-otel-dotnet/tree/master/integration-test-app) for setup steps.
+See the [example sample application](integration-test-app) for setup steps.
 
 ## Useful Links
 
